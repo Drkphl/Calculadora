@@ -11,7 +11,9 @@ function check(num) {
 }
 
 let entrada1 = Number(prompt('Insira o primeiro valor: '));
-let operação = prompt('selecione a operação a ser realizada (+;-;*;/;%): ');
+console.log('\nOperações suportadas (+)(-)(*)(/)(%)');
+let operação = prompt('selecione a operação a ser realizada: ');
+
 let entrada2 = Number(prompt('Insira o segundo valor: '));
 
 check(entrada1);
@@ -33,11 +35,12 @@ if ((check = true)) {
             break;
         case '/':
             if (entrada2 == 0) {
-                console.log(`não é possivel dividir por zero, resultado infinito!`);
+                console.log(`não é possivel dividir zero ou dividir por zero!`);
                 break;
             } else {
                 resultado = entrada1 / entrada2;
                 console.log(`o resultado é ${resultado}`);
+                break;
             }
         case '%':
             resultado = (entrada1 * entrada2) / 100;
